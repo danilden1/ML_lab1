@@ -2,6 +2,19 @@
 
 # Press Shift+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+def sum_mult(list_a, list_b):
+    if len(list_a) != len(list_b):
+        return None
+    list_summ = []
+    list_mult = []
+    for elem in range(len(list_a)):
+        # stupid number sheck
+        try:
+            list_summ.append(list_a[elem] + list_b[elem])
+            list_mult.append(list_a[elem] * list_b[elem])
+        except:
+            return None
+    return [list_summ, list_mult]
 
 
 def polindrome(inp_str):
@@ -17,6 +30,7 @@ def polindrome(inp_str):
     else:
         return False
 
+
 # Press the green button in the gutter to run the script.
 test_list = [
     'rar',
@@ -29,7 +43,12 @@ test_list = [
     ' T ',
     3
 ]
-for test_string in test_list:
-    print(polindrome(test_string))
-#polindrome(test_list)
+
+# for test_string in test_list:
+#   print(polindrome(test_string))
+# polindrome(test_list)
+l_a = [1, 2, 3, 4, 5]
+l_b = [2, 3, 4, 5, 6]
+
+print(sum_mult(l_a, l_b))
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
